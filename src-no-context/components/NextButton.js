@@ -1,8 +1,9 @@
-import useQuizContext from "../hooks/useQuizContext";
-
-export default function NextQuestion() {
-  const { dispatch, answer, index, numQuestions } = useQuizContext();
-
+export default function NextQuestion({
+  dispatch,
+  answer,
+  index,
+  numQuestions,
+}) {
   if (answer === null) return null;
 
   if (index < numQuestions - 1)
